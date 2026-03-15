@@ -1,0 +1,218 @@
+.tr-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.tr-subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+  margin: -0.5rem 0 1.5rem;
+}
+
+/* Language pair selector */
+.tr-lang-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+}
+
+.tr-lang-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.tr-lang-flag {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.tr-lang-name {
+  font-size: 14px;
+}
+
+.tr-lang-arrow {
+  color: var(--accent);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0 2px;
+}
+
+.tr-lang-select-wrap {
+  position: relative;
+}
+
+.tr-lang-select {
+  appearance: none;
+  background: var(--accent-bg);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  padding: 8px 36px 8px 14px;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+  /* SVG fill colour is hardcoded — CSS vars can't be used inside data URIs */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%237c6af7' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.tr-lang-select:hover,
+.tr-lang-select:focus {
+  border-color: var(--accent-hover);
+  background-color: var(--accent-bg-hover);
+}
+
+/* Editor panels */
+.tr-editor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 620px) {
+  .tr-editor {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tr-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.tr-panel-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 6px;
+}
+
+.tr-textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  resize: vertical;
+  min-height: 130px;
+  outline: none;
+  transition: border-color 0.2s;
+  height: 100%;
+}
+
+.tr-textarea:focus {
+  border-color: var(--accent);
+}
+
+.tr-textarea::placeholder {
+  color: var(--text-faint);
+}
+
+.tr-panel-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface-dark);
+  border: 1px solid var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  padding: 6px 14px;
+}
+
+.tr-char-count {
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.tr-hint {
+  font-size: 11px;
+  color: var(--text-hint);
+}
+
+/* Output panel */
+.tr-output-box {
+  background: var(--surface-dark);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  min-height: 168px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.tr-output-text {
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.tr-output-placeholder {
+  color: var(--text-hint);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+.tr-output-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-dim);
+  font-size: 13px;
+  padding: 4px 0;
+}
+
+/* Translate button */
+.tr-btn {
+  align-self: flex-start;
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 24px;
+  transition:
+    background 0.15s,
+    opacity 0.15s,
+    transform 0.1s;
+}
+
+.tr-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.tr-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.tr-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

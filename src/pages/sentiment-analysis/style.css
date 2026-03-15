@@ -1,0 +1,25 @@
+.sa-textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  padding: 16px;
+  padding-bottom: 32px;
+  resize: vertical;
+  min-height: 130px;
+  outline: none;
+  transition: border-color 0.2s;
+  margin-bottom: 1.25rem;
+}
+
+.sa-textarea:focus {
+  border-color: var(--accent);
+}
+
+.sa-textarea::placeholder {
+  color: var(--text-faint);
+}
