@@ -30,6 +30,12 @@ export function Sidebar() {
       >
         Product Embeddings
       </a>
+      <a
+        href="/image-captioning"
+        class={url === "/image-captioning" ? "active" : ""}
+      >
+        Image Captioning
+      </a>
     </nav>
   );
 }

@@ -8,6 +8,7 @@ A quick showcase of [Transformers.js](https://huggingface.co/docs/transformers.j
 - **Translation** — translate text between languages
 - **Background Removal** — remove image backgrounds using segmentation models
 - **Product Embeddings** — generate semantic embeddings for product search/similarity
+- **Image Captioning** — generate captions for images for furhter use with semantic search
 
 ## Tech Stack
 

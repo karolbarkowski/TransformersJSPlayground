@@ -9,6 +9,7 @@ import {
   ProductEmbeddingsPage,
   SentimentAnalysisPage,
   TranslationPage,
+  ImageCaptioningPage,
 } from "./pages/index.js";
 
 export function App() {
@@ -31,6 +32,10 @@ export function App() {
             <Route
               path="/product-embeddings"
               component={ProductEmbeddingsPage}
+            />
+            <Route
+              path="/image-captioning"
+              component={ImageCaptioningPage}
             />
           </Router>
         </main>
